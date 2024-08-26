@@ -1,0 +1,11 @@
+1. sh sysinit.sh
+
+2. sh kickstart.sj
+运行kickstart脚本时，记得修改IP地址，原ip地址为192.168.1.31
+3. sh ssh.sh
+
+4. sh ssh-DNS.sh
+
+5. sh hostname.sh
+
+6. sh network.sh 

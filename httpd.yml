@@ -1,0 +1,12 @@
+- hosts: qyy_servers
+  become: yes
+  become_method: sudo
+  handlers:
+  - name: restart httpd
+    service: name=httpd state=restarted
+  tasks:
+  - lineinfile:
+      path: /etc/httpd/conf/httpd.conf
+      regexp: '^#ServerName'
+      line: 'ServerName {{  ansible_fqdn  }}'
+    notify: restart httpd
